@@ -22,7 +22,7 @@ export const apiSlice = createApi({
     }),
     endpoints(builder) {
         return {
-            fetchBreeds: builder.query<Bread[], number | void>({
+            fetchBreeds:builder.query<Bread[], number | void>({
                 query(limit = 10) {
                     return `/breeds?limit=${limit}`
                 }
